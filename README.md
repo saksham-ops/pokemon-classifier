@@ -33,5 +33,4 @@ Use code with caution.
 
 Or you may upload a file for Batch Prediction using route '/predict_file" and your file with predicted outputs will be downloaded in your system when request method is "POST"
 
-DashBoard link
-https://public.tableau.com/views/PokemonDashboard_17045321287470/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
+
