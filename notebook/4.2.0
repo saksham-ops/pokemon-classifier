@@ -1,0 +1,27 @@
+Collecting nbformat
+  Using cached nbformat-5.9.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting fastjsonschema (from nbformat)
+  Using cached fastjsonschema-2.19.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting jsonschema>=2.6 (from nbformat)
+  Using cached jsonschema-4.20.0-py3-none-any.whl.metadata (8.1 kB)
+Requirement already satisfied: jupyter-core in e:\ml_projects\pokemon\poke\lib\site-packages (from nbformat) (5.5.1)
+Requirement already satisfied: traitlets>=5.1 in e:\ml_projects\pokemon\poke\lib\site-packages (from nbformat) (5.14.0)
+Collecting attrs>=22.2.0 (from jsonschema>=2.6->nbformat)
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6->nbformat)
+  Using cached jsonschema_specifications-2023.11.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=2.6->nbformat)
+  Using cached referencing-0.32.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=2.6->nbformat)
+  Downloading rpds_py-0.15.2-cp39-none-win_amd64.whl.metadata (4.2 kB)
+Requirement already satisfied: platformdirs>=2.5 in e:\ml_projects\pokemon\poke\lib\site-packages (from jupyter-core->nbformat) (4.1.0)
+Requirement already satisfied: pywin32>=300 in e:\ml_projects\pokemon\poke\lib\site-packages (from jupyter-core->nbformat) (306)
+Using cached nbformat-5.9.2-py3-none-any.whl (77 kB)
+Using cached jsonschema-4.20.0-py3-none-any.whl (84 kB)
+Using cached fastjsonschema-2.19.0-py3-none-any.whl (23 kB)
+Using cached jsonschema_specifications-2023.11.2-py3-none-any.whl (17 kB)
+Using cached referencing-0.32.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.15.2-cp39-none-win_amd64.whl (194 kB)
+   ---------------------------------------- 0.0/194.8 kB ? eta -:--:--   ---------------------------------------- 0.0/194.8 kB ? eta -:--:--   ---------------------------------------- 0.0/194.8 kB ? eta -:--:--   -- ------------------------------------- 10.2/194.8 kB ? eta -:--:--   -- ------------------------------------- 10.2/194.8 kB ? eta -:--:--   ------ -------------------------------- 30.7/194.8 kB 217.9 kB/s eta 0:00:01   ------------ -------------------------- 61.4/194.8 kB 328.2 kB/s eta 0:00:01   ------------------------------- ------ 163.8/194.8 kB 701.4 kB/s eta 0:00:01   -------------------------------------- 194.8/194.8 kB 788.7 kB/s eta 0:00:00
+Installing collected packages: fastjsonschema, rpds-py, attrs, referencing, jsonschema-specifications, jsonschema, nbformat
+Successfully installed attrs-23.1.0 fastjsonschema-2.19.0 jsonschema-4.20.0 jsonschema-specifications-2023.11.2 nbformat-5.9.2 referencing-0.32.0 rpds-py-0.15.2

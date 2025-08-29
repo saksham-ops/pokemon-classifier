@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Stats Predictor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #6c63ff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(108,99,255,0.5);
+    }
+
+    input[type="submit"] {
+      background: #6c63ff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #5548e2;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Pokémon Stats Predictor</h2>
+    <form action="{{url_for('predict_datapoint')}}" method="POST">
+
+      <div class="form-group">
+        <label for="Total">Total:</label>
+        <input type="text" id="Total" name="Total" placeholder="Enter Total value (float)">
+      </div>
+
+      <div class="form-group">  
+        <label for="HP">HP:</label>
+        <input type="text" id="HP" name="HP" placeholder="Enter HP value (float)">
+      </div>
+      
+      <div class="form-group">
+        <label for="Attack">Attack:</label>
+        <input type="text" id="Attack" name="Attack" placeholder="Enter Attack value (float)">
+      </div>
+    
+      <div class="form-group">
+        <label for="Defense">Defense:</label>
+        <input type="text" id="Defense" name="Defense" placeholder="Enter Defense value (float)">
+      </div>
+    
+      <div class="form-group">
+        <label for="Sp_Atk">Sp_Atk:</label>
+        <input type="text" id="Sp_Atk" name="Sp_Atk" placeholder="Enter Sp_Atk value (float)">
+      </div>         
+
+      <div class="form-group">
+        <label for="Sp_Def">Sp_Def:</label>
+        <input type="text" id="Sp_Def" name="Sp_Def" placeholder="Enter Sp_Def value (float)">
+      </div> 
+
+      <div class="form-group">
+        <label for="Speed">Speed:</label>
+        <input type="text" id="Speed" name="Speed" placeholder="Enter Speed value (float)">
+      </div>
+      
+      <div class="form-group">
+        <label for="Height_m">Height_m:</label>
+        <input type="text" id="Height_m" name="Height_m" placeholder="Enter Height_m value (float)">
+      </div>         
+
+      <div class="form-group">
+        <label for="Weight_kg">Weight_kg:</label>
+        <input type="text" id="Weight_kg" name="Weight_kg" placeholder="Enter Weight_kg value (float)">
+      </div>             
+
+      <div class="form-group">
+        <label for="Catch_Rate">Catch_Rate:</label>
+        <input type="text" id="Catch_Rate" name="Catch_Rate" placeholder="Enter Catch_Rate value (float)">
+      </div>      
+
+      <div class="form-group">
+        <label for="hasMegaEvolution">hasMegaEvolution:</label>
+        <select id="hasMegaEvolution" name="hasMegaEvolution">
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Predict">
+    </form>
+
+    <div class="result">{{final_result}}</div>
+
+    <img src="https://archives.bulbagarden.net/media/upload/thumb/a/aa/2018_Legendary_Pokemon_Distributions_artwork.png/1145px-2018_Legendary_Pokemon_Distributions_artwork.png" alt="Pokemon Artwork">
+  </div>
+</body>
+</html>

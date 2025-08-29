@@ -1,0 +1,8 @@
+pandas
+numpy
+seaborn
+scikit-learn
+matplotlib
+flask
+imblearn==0.0
+-e .
